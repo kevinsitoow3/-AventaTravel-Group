@@ -155,7 +155,7 @@ def delete_reserva(reserva_id: int, db: Session = Depends(get_db)):
                 detail="No se puede eliminar esta reserva porque tiene usuarios relacionados."
             )
         
-        db.delete(product)
+        db.delete(reserva)
         db.commit()
         
         return {"mensaje": "Reserva eliminada"}

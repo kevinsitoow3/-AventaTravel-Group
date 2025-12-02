@@ -10,9 +10,9 @@ from schemas.schemas import (
     ReservaCreate,
 
     # Viajes
-    Viaje,
-    ViajeBase,
-    ViajeCreate
+    Plan,
+    PlanBase,
+    PlanCreate
 )
 
 __all__ = [
@@ -27,7 +27,7 @@ __all__ = [
     "ReservaCreate",
 
     # Viajes
-    "Viaje",
-    "ViajeBase",
-    "ViajeCreate"
+    "Plan",
+    "PlanBase",
+    "PlanCreate"
 ]

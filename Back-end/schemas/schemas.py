@@ -41,17 +41,17 @@ class Reserva(ReservaBase):
         from_attributes: True
 
 # ==================== PLAN SCHEMAS ====================
-class ViajeBase(BaseModel):
+class PlanBase(BaseModel):
     nombre_plan: str
     categoria_plan: str
     descuento_plan: int
 
 
-class ViajeCreate(ViajeBase):
+class PlanCreate(PlanBase):
     pass
 
 
-class Viaje(ViajeBase):
+class Plan(PlanBase):
     id_plan: int
 
     class Config:

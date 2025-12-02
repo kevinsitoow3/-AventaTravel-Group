@@ -5,6 +5,7 @@ from database.database import engine, Base
 from models import models
 from routers.users import router as users_router
 from routers.reserva import router as reservas_router
+from routers.plan import router as plan_router
 
 # Crear las tablas en la base de datos
 Base.metadata.create_all(bind=engine)
@@ -40,6 +41,7 @@ def root():
 API_PREFIX = "/api"
 app.include_router(users_router, prefix=API_PREFIX)
 app.include_router(reservas_router, prefix=API_PREFIX)
+app.include_router(plan_router, prefix=API_PREFIX)
 
 if __name__ == "__main__":
     import uvicorn
