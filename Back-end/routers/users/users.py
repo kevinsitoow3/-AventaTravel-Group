@@ -32,7 +32,6 @@ def list_users(db: Session = Depends(get_db)):
                 'nombre_usuario': user.nombre_usuario,
                 'correo_usuario': user.correo_usuario,
                 'telefono_usuario': user.telefono_usuario,
-                'id_reserva': user.id_reserva,
                 'fecha_creacion': user.fecha_creacion,
                 'fecha_actualizacion': user.fecha_actualizacion,
             }
@@ -55,7 +54,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
             nombre_usuario=user.nombre_usuario,
             correo_usuario=user.correo_usuario,
             telefono_usuario=user.telefono_usuario,
-            id_producto=None  # Opcional, se puede asignar después
+            
         )
         
         db.add(db_user)
@@ -68,7 +67,6 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
             'nombre_usuario': db_user.nombre_usuario,
             'correo_usuario': db_user.correo_usuario,
             'telefono_usuario': db_user.telefono_usuario,
-            'id_producto': db_user.id_producto,
             'fecha_creacion': db_user.fecha_creacion,
             'fecha_actualizacion': db_user.fecha_actualizacion,
         }
@@ -100,7 +98,6 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
             'nombre_usuario': user.nombre_usuario,
             'correo_usuario': user.correo_usuario,
             'telefono_usuario': user.telefono_usuario,
-            'id_producto': user.id_producto,
             'fecha_creacion': user.fecha_creacion,
             'fecha_actualizacion': user.fecha_actualizacion,
         }

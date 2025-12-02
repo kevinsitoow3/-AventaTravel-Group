@@ -14,10 +14,10 @@ class User(Base):
     fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
     fecha_actualizacion = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
-    id_reserva = Column(Integer, ForeignKey("reserva.id_reserva"), nullable=True)
+    
 
     # Relationship
-    reservas = relationship("Reservas", back_populates="user")
+    
 
 
 
@@ -31,10 +31,10 @@ class Reserva(Base):
     monto_reserva = Column(Integer, nullable=False)
     cuotas_reserva = Column(Integer, nullable=False)
 
-    id_usuario = Column(String(100), ForeignKey("users.id_usuario"), nullable=False)
+    
 
     # Relationship
-    user = relationship("User", back_populates="reservas")
+    
 
 
 class Plan(Base):
@@ -45,7 +45,7 @@ class Plan(Base):
     categoria_plan = Column(String(100), nullable=False)
     descuento_plan = Column(Integer,nullable=False)
 
-    id_usuario = Column(String(100), ForeignKey("users.id_usuario"), nullable=False)
+    
 
     # Relationship
-    user = relationship("User", back_populates="planes")
+    
