@@ -21,7 +21,7 @@ const Reservas = () => {
       <div className="section-header">
         <h2>Reservas</h2>
         <button className="btn-primary" onClick={toggleForm}>
-          {showForm ? 'Cancelar' : '+ Nuevo Reserva'}
+          {showForm ? 'Cancelar' : '+ Nueva Reserva'}
         </button>
       </div>
 
